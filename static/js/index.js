@@ -28,6 +28,10 @@ $(document).ready(function() {
       $(".navbar-menu").toggleClass("is-active");
 
     });
+    $('.item p.has-text-centered, .item figcaption.has-text-centered').each(function() {
+      console.log('Caption:', $(this).text());
+      $(this).css('display', 'block');
+  });
 
     var options = {
 			slidesToScroll: 1,
@@ -65,6 +69,7 @@ $(document).ready(function() {
         player.currentTime = player.duration / 100 * this.value;
       })
     }, false);*/
+    
     preloadInterpolationImages();
 
     $('#interpolation-slider').on('input', function(event) {
